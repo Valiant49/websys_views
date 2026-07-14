@@ -1,0 +1,7 @@
+/* Minimal custom CSS: utilities handled by Tailwind via CDN. */
+
+/* Triangle flag for submit button (clip-path not provided by Tailwind) */
+.submit-flag {
+  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}

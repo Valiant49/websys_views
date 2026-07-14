@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#12221D',
+          'ink-soft': '#2C3E38',
+          paper: '#ECE7D9',
+          'paper-hi': '#F5F1E6',
+          line: '#B9C2AE',
+          pine: '#33685A',
+          'pine-dim': '#274F44',
+          mark: '#C1703A',
+          danger: '#A5432B'
+        },
+        fontFamily: {
+          display: ['Space Grotesk', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+          mono: ['IBM Plex Mono', 'monospace']
+        }
+      }
+    }
+  };
+</script>
+</head>
+<body class="min-h-screen flex items-center justify-center py-12 px-6 bg-paper text-ink font-sans">
+  <div class="w-full max-w-[380px] border border-line/70 rounded bg-paper-hi p-8 shadow-xl">
+    <div class="mb-8 border-b border-line pb-2" role="tablist" aria-label="Sign in or create account">
+      <div class="flex gap-8">
+        <button id="tab-signin" class="font-display text-[1.35rem] font-semibold pb-3 text-ink" role="tab" aria-selected="true" aria-controls="panel-signin" onclick="switchTab('signin')">Sign in</button>
+        <button id="tab-signup" class="font-display text-[1.35rem] font-semibold pb-3 text-ink/40" role="tab" aria-selected="false" aria-controls="panel-signup" onclick="switchTab('signup')">Create account</button>
+      </div>
+    </div>
+
+    <div>
+      <form id="panel-signin" class="" role="tabpanel" aria-labelledby="tab-signin">
+        <p class="mb-7 text-sm leading-[1.6] text-ink-soft">Good to see you again. Pick up right where you left off.</p>
+
+        <div class="mb-5">
+          <label class="block mb-1 font-mono text-[0.66rem] tracking-widest uppercase text-ink-soft" for="si-email">Email</label>
+          <input class="w-full border-0 border-b border-line bg-transparent py-2 text-base text-ink focus:outline-none focus:border-b-pine" id="si-email" type="email" required autocomplete="email" />
+        </div>
+
+        <div class="mb-5">
+          <div class="flex justify-between items-baseline mb-1">
+            <label class="font-mono text-[0.66rem] tracking-widest uppercase text-ink-soft" for="si-password">Password</label>
+            <a class="text-[0.72rem] font-medium text-pine hover:underline" href="#">Forgot?</a>
+          </div>
+          <input class="w-full border-0 border-b border-line bg-transparent py-2 text-base text-ink focus:outline-none focus:border-b-pine" id="si-password" type="password" required autocomplete="current-password" />
+        </div>
+
+        <label class="flex items-start gap-2 mb-6 text-sm leading-6 text-ink-soft">
+          <input class="mt-1 accent-pine" type="checkbox" />
+          Keep me signed in on this device
+        </label>
+
+        <button type="submit" class="flex w-full items-center justify-center gap-2 border-0 rounded-sm bg-ink text-paper-hi py-3 px-4 text-sm font-medium hover:bg-pine-dim">
+          <span class="w-2 h-2 bg-mark submit-flag inline-block"></span> Sign in
+        </button>
+
+        <p class="mt-5 text-center text-[0.78rem] text-ink-soft">
+          New here? <button type="button" class="border-0 bg-none p-0 text-[0.78rem] font-semibold text-pine hover:underline" onclick="switchTab('signup')">Create an account</button>
+        </p>
+      </form>
+
+      <form id="panel-signup" class="hidden" role="tabpanel" aria-labelledby="tab-signup">
+        <p class="mb-7 text-sm leading-[1.6] text-ink-soft">Set your first waypoint. Takes less than a minute.</p>
+
+        <div class="mb-5">
+          <label class="block mb-1 font-mono text-[0.66rem] tracking-widest uppercase text-ink-soft" for="su-name">Full name</label>
+          <input class="w-full border-0 border-b border-line bg-transparent py-2 text-base text-ink focus:outline-none focus:border-b-pine" id="su-name" type="text" required autocomplete="name" />
+        </div>
+
+        <div class="mb-5">
+          <label class="block mb-1 font-mono text-[0.66rem] tracking-widest uppercase text-ink-soft" for="su-email">Email</label>
+          <input class="w-full border-0 border-b border-line bg-transparent py-2 text-base text-ink focus:outline-none focus:border-b-pine" id="su-email" type="email" required autocomplete="email" />
+        </div>
+
+        <div class="mb-5">
+          <label class="block mb-1 font-mono text-[0.66rem] tracking-widest uppercase text-ink-soft" for="su-password">Password</label>
+          <input class="w-full border-0 border-b border-line bg-transparent py-2 text-base text-ink focus:outline-none focus:border-b-pine" id="su-password" type="password" required autocomplete="new-password" />
+        </div>
+
+        <label class="flex items-start gap-2 mb-6 text-sm leading-6 text-ink-soft">
+          <input class="mt-1 accent-pine" type="checkbox" required />
+          I agree to the Terms of Service and Privacy Policy
+        </label>
+
+        <button type="submit" class="flex w-full items-center justify-center gap-2 border-0 rounded-sm bg-ink text-paper-hi py-3 px-4 text-sm font-medium hover:bg-pine-dim">
+          <span class="w-2 h-2 bg-mark submit-flag inline-block"></span> Create account
+        </button>
+
+        <p class="mt-5 text-center text-[0.78rem] text-ink-soft">
+          Already have an account? <button type="button" class="border-0 bg-none p-0 text-[0.78rem] font-semibold text-pine hover:underline" onclick="switchTab('signin')">Sign in</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+<script>
+  function switchTab(which){
+    const signinTab = document.getElementById('tab-signin');
+    const signupTab = document.getElementById('tab-signup');
+    const signinPanel = document.getElementById('panel-signin');
+    const signupPanel = document.getElementById('panel-signup');
+
+    const activate = (tab, other, panel, otherPanel) => {
+      tab.classList.remove('text-ink/40');
+      tab.classList.add('text-ink');
+      other.classList.remove('text-ink');
+      other.classList.add('text-ink/40');
+      panel.classList.remove('hidden');
+      otherPanel.classList.add('hidden');
+      tab.setAttribute('aria-selected', 'true');
+      other.setAttribute('aria-selected', 'false');
+    };
+
+    if (which === 'signin') activate(signinTab, signupTab, signinPanel, signupPanel);
+    else activate(signupTab, signinTab, signupPanel, signinPanel);
+  }
+
+  document.querySelectorAll('form').forEach(f => {
+    f.addEventListener('submit', e => e.preventDefault());
+  });
+</script>
+
+</body>
+</html>
