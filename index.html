@@ -352,5 +352,67 @@
     </div>
 
 </section>
+
+<!-- ================= INQUIRY SECTION ================= -->
+<section class="bg-white py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-[90px]">
+
+    <h2 class="font-cormorant text-4xl sm:text-5xl lg:text-6xl text-[#111] mb-2 sm:mb-3">
+        Inquiry
+    </h2>
+
+    <p class="font-alegreya italic text-sm sm:text-base text-gray-600 mb-8 sm:mb-10">
+        Jelly beans cake oat cake marzipan danish jelly-o muffin caramels chocolate — I love pastry sweet roll lemon drops
+    </p>
+
+    <form class="flex flex-col gap-5 sm:gap-6">
+
+        <!-- Name / Contact Number / Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+
+            <div class="flex flex-col">
+                <label for="name" class="font-nunito text-sm sm:text-base text-[#111] mb-2">
+                    Name:
+                </label>
+                <input type="text" id="name" name="name"
+                       class="h-11 sm:h-12 bg-secondary px-4 font-nunito text-sm text-[#353535] focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="contact" class="font-nunito text-sm sm:text-base text-[#111] mb-2">
+                    Contact Number:
+                </label>
+                <input type="tel" id="contact" name="contact"
+                       class="h-11 sm:h-12 bg-secondary px-4 font-nunito text-sm text-[#353535] focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="email" class="font-nunito text-sm sm:text-base text-[#111] mb-2">
+                    Email:
+                </label>
+                <input type="email" id="email" name="email"
+                       class="h-11 sm:h-12 bg-secondary px-4 font-nunito text-sm text-[#353535] focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+
+        </div>
+
+        <!-- Message -->
+        <div class="flex flex-col">
+            <label for="message" class="font-nunito text-sm sm:text-base text-[#111] mb-2">
+                Message:
+            </label>
+            <textarea id="message" name="message" rows="6"
+                      class="bg-secondary px-4 py-3 font-nunito text-sm text-[#353535] resize-none focus:outline-none focus:ring-2 focus:ring-primary">
+            </textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit"
+                class="mt-2 w-fit px-8 py-3 bg-primary text-white font-alegreya font-medium text-sm sm:text-base tracking-wide self-center transition duration-300 hover:bg-primary-hover">
+            SUBMIT
+        </button>
+
+    </form>
+
+</section>
 </body>
 </html>
