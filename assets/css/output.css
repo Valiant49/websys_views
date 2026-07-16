@@ -493,6 +493,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .overflow-visible {
+    overflow: visible;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -646,6 +649,9 @@
   .text-\[clamp\(1\.1rem\,2\.2vw\,3rem\)\] {
     font-size: clamp(1.1rem, 2.2vw, 3rem);
   }
+  .text-\[clamp\(1\.15rem\,3\.2vw\,3rem\)\] {
+    font-size: clamp(1.15rem, 3.2vw, 3rem);
+  }
   .text-\[clamp\(1\.25rem\,2\.5vw\,3rem\)\] {
     font-size: clamp(1.25rem, 2.5vw, 3rem);
   }
@@ -660,6 +666,9 @@
   }
   .text-\[clamp\(2rem\,6vw\,8\.75rem\)\] {
     font-size: clamp(2rem, 6vw, 8.75rem);
+  }
+  .text-\[clamp\(3\.5rem\,15vw\,8\.75rem\)\] {
+    font-size: clamp(3.5rem, 15vw, 8.75rem);
   }
   .leading-5 {
     --tw-leading: calc(var(--spacing) * 5);
@@ -883,6 +892,11 @@
       margin-top: calc(var(--spacing) * 12);
     }
   }
+  .sm\:mb-0 {
+    @media (width >= 40rem) {
+      margin-bottom: 0;
+    }
+  }
   .sm\:mb-3 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 3);
@@ -983,6 +997,11 @@
       height: 380px;
     }
   }
+  .sm\:h-screen {
+    @media (width >= 40rem) {
+      height: 100vh;
+    }
+  }
   .sm\:w-16 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 16);
@@ -1026,6 +1045,11 @@
   .sm\:gap-x-8 {
     @media (width >= 40rem) {
       column-gap: calc(var(--spacing) * 8);
+    }
+  }
+  .sm\:overflow-hidden {
+    @media (width >= 40rem) {
+      overflow: hidden;
     }
   }
   .sm\:px-8 {
@@ -1114,6 +1138,16 @@
     @media (width >= 40rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .sm\:text-\[clamp\(1rem\,2\.2vw\,3rem\)\] {
+    @media (width >= 40rem) {
+      font-size: clamp(1rem, 2.2vw, 3rem);
+    }
+  }
+  .sm\:text-\[clamp\(2rem\,6vw\,8\.75rem\)\] {
+    @media (width >= 40rem) {
+      font-size: clamp(2rem, 6vw, 8.75rem);
     }
   }
   .sm\:leading-7 {
