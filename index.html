@@ -5,11 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facility Reservation System</title>
 
-    <link rel="stylesheet" href="./assets/css/output.css">
+    <!-- Tailwind CDN (preview only — swap for Vite build in Laravel) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#284b63",
+              "primary-hover": "#12364d",
+              secondary: "#d9d9d9",
+            },
+            fontFamily: {
+              cormorant: ["Cormorant Garamond", "serif"],
+              alegreya: ["Alegreya", "serif"],
+              nunito: ["Nunito", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600&family=Cormorant+Garamond:wght@600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-<h1 class="text-5xl font-bold text-blue-600 text-center mt-20">
-    Tailwind is Working! 🎉
+
+<body class="bg-[#fafafa] text-[#353535] font-nunito">
+
+    <!-- ================= HERO SECTION ================= -->
+<section class="relative w-full h-screen overflow-hidden flex flex-col">
+
+    <!-- Background Image — 55% of screen height -->
+    <img src="./assets/images/hero.jpg" alt="Hero Image"
+         class="w-full h-[55vh] object-cover block flex-none">
+
+    <!-- Blue Panel — automatically fills remaining 45% -->
+    <div class="flex-1 bg-primary flex flex-col justify-start px-6 sm:px-10 lg:px-[90px]">
+
+    <h1 class="font-cormorant font-semibold text-white leading-[0.95] text-[clamp(2rem,6vw,8.75rem)] -mt-[0.3em] sm:-mt-[0.4em] lg:-mt-[0.5em]">
+    LIVE YOUR LIFE
 </h1>
+
+    <p class="font-alegreya font-normal text-white leading-[1.3] mt-4 sm:mt-5 text-[clamp(1rem,2.2vw,3rem)]">
+        Socialize, exercise, and play in
+        <br>
+        Soladia
+    </p>
+
+    <button class="mt-6 sm:mt-8 w-[150px] h-[54px] sm:w-[180px] sm:h-[65px] lg:w-[205px] lg:h-[73px] bg-white text-[#353535] font-alegreya font-medium text-xl sm:text-2xl transition duration-300 hover:bg-secondary">
+        EXPLORE
+    </button>
+
+</div>
+
+    <!-- Navbar -->
+    <nav class="absolute top-4 sm:top-6 lg:top-[30px] left-0 w-full flex justify-between items-center px-5 sm:px-10 lg:px-[8%] z-[100]">
+        <!-- unchanged -->
+    </nav>
+
+</section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+<section class="bg-white py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-[90px]">
+
+    <h2 class="font-cormorant text-4xl sm:text-5xl lg:text-6xl text-[#111] mb-8 sm:mb-10 lg:mb-14">
+        About Soladia
+    </h2>
+
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+
+        <!-- Image -->
+        <img src="./assets/images/about.jpg" alt="Aerial view of Soladia community"
+             class="w-full lg:w-1/2 h-[260px] sm:h-[340px] lg:h-[420px] object-cover">
+
+        <!-- Text + Button -->
+        <div class="w-full lg:w-1/2 flex flex-col">
+
+            <p class="font-alegreya text-base sm:text-lg leading-7 sm:leading-8 text-gray-800">
+                Cupcake ipsum dolor sit amet chocolate. Pastry jelly-o cotton candy carrot
+                cake candy canes bear claw bonbon donut. Halvah sugar plum tiramisu toffee
+                wafer cookie. Lemon drops pie jujubes carrot cake tiramisu oat cake jelly.
+                Macaroon dragée jujubes dessert carrot cake donut dragée. Caramels lemon
+                drops cotton candy cookie marshmallow ice cream tootsie roll.
+            </p>
+
+            <button class="mt-6 sm:mt-8 w-fit px-7 py-3 bg-primary text-white font-alegreya font-medium text-sm sm:text-base tracking-wide transition duration-300 hover:bg-primary-hover">
+                READ MORE
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
 </body>
 </html>

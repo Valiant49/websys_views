@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #284b63;
+  --color-primary-hover: #12364d;
+  --color-secondary: #d9d9d9;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-alegreya: "Alegreya", serif;
+  --font-nunito: "Nunito", sans-serif;
+}
