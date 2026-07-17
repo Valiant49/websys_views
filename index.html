@@ -78,28 +78,36 @@
                 to make every celebration unforgettable.
             </p>
 
-            <div class="flex justify-start gap-5 mt-10">
+            <div class="flex justify-center lg:justify-start gap-5 mt-10">
 
-                <button class="border border-[#284b63]
+                <button
+                    class="border border-[#284b63]
                     text-[#284b63]
-                    px-8 py-3 rounded-md
+                    px-8
+                    py-3
+                    rounded-md
                     hover:bg-[#284b63]
                     hover:text-white
-                    duration-300">
+                    duration-300
+                    font-['Alegreya']">
 
-                        Preview
+                    Preview
 
-                    </button>
+                </button>
 
-                    <button class="bg-[#284b63]
+                <button
+                    class="bg-[#284b63]
                     hover:bg-[#12364d]
                     text-white
-                    px-8 py-3 rounded-md
-                    duration-300">
+                    px-8
+                    py-3
+                    rounded-md
+                    duration-300
+                    font-['Alegreya']">
 
-                        Book Now
+                    Book Now
 
-                    </button>
+                </button>
 
             </div>
 
@@ -574,175 +582,152 @@
 
 </section>
 
-<!-- ================= INQUIRY FORM ================= -->
-
-<section class="bg-[#284b63] py-24">
-
+<!-- ================= INQUIRY ================= -->
+<section class="bg-white py-20">
+ 
     <div class="max-w-5xl mx-auto px-8">
-
-        <h2 class="text-white text-6xl text-center font-semibold font-['Cormorant_Garamond'] mb-14">
-
-            Send us an Inquiry
-
+ 
+        <!-- Heading -->
+        <h2 class="font-['Cormorant_Garamond'] text-6xl text-black">
+            Inquiry
         </h2>
-
-        <form class="grid md:grid-cols-2 gap-6">
-
-            <input
-                type="text"
-                placeholder="Full Name"
-                class="bg-white rounded-md p-4 outline-none">
-
-            <input
-                type="text"
-                placeholder="Contact Number"
-                class="bg-white rounded-md p-4 outline-none">
-
-            <input
-                type="email"
-                placeholder="Email Address"
-                class="bg-white rounded-md p-4 outline-none md:col-span-2">
-
-            <textarea
-                rows="6"
-                placeholder="Message"
-                class="bg-white rounded-md p-4 outline-none md:col-span-2"></textarea>
-
-            <button
-                class="bg-white text-[#284b63] py-4 rounded-md font-semibold hover:bg-[#d9d9d9] duration-300 md:col-span-2">
-
-                SEND MESSAGE
-
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="bg-[#12364d] text-white">
-
-    <div class="max-w-7xl mx-auto px-12 py-8">
-
-        <div class="flex flex-wrap lg:flex-nowrap items-start justify-between">
-
-            <!-- LOGO -->
-            <div class="w-full lg:w-[30%] flex flex-col items-center lg:items-center">
-
-                <img
-                    src="images/logo.png"
-                    alt="Logo"
-                    class="w-20 h-20 object-contain mb-4">
-
-                <h2
-                    class="font-['Cormorant_Garamond']
-                    text-[30px]
-                    tracking-wide
-                    text-center">
-
-                    SOLADIA RESIDENCES
-
-                </h2>
-
+ 
+        <p class="font-['Alegreya'] text-sm text-black mt-1 mb-6">
+            Jelly beans cake oat cake marzipan danish jelly-o muffin caramels chocolate —
+            I love pastry sweet roll lemon drops
+        </p>
+ 
+        <form class="max-w-2xl mx-auto">
+ 
+            <!-- Top Row -->
+            <div class="grid md:grid-cols-3 gap-1">
+ 
+                <div>
+                    <label class="text-sm block mb-1 text-[#284b63]">Name:</label>
+                    <input
+                        type="text"
+                        class="w-full h-9 bg-[#fafafa] rounded-md px-3">
+                </div>
+ 
+                <div>
+                    <label class="text-sm block mb-1 text-[#284b63]">Contact Number:</label>
+                    <input
+                        type="text"
+                        class="w-full h-9 bg-[#fafafa] rounded-md px-3">
+                </div>
+ 
+                <div>
+                    <label class="text-sm block mb-1 text-[#284b63]">Email:</label>
+                    <input
+                        type="email"
+                        class="w-full h-9 bg-[#fafafa] rounded-md px-3">
+                </div>
+ 
             </div>
+ 
+            <!-- Message -->
+            <div class="mt-3">
+                <label class="text-sm block mb-1 text-[#284b63]">Message:</label>
+                <textarea
+                    rows="7"
+                    class="w-full bg-[#fafafa] rounded-md p-3 resize-none"></textarea>
+            </div>
+ 
+            <!-- Button -->
+            <div class="text-center mt-5">
+                <button
+                    type="submit"
+                    class="bg-[#284b63] hover:bg-[#12364d] text-white px-8 py-2 rounded-md tracking-[4px] duration-300">
+                    SUBMIT
+                </button>
+            </div>
+ 
+        </form>
+ 
+    </div>
+ 
+</section>
+ 
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#284b63] text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
+        <!-- Footer Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-            <!-- CONTACT -->
-            <div class="w-full lg:w-[22%] mt-10 lg:mt-0">
+<!-- Logo -->
+<div class="flex items-center pt-6">
 
-                <h3
-                    class="font-['Cormorant_Garamond']
-                    text-[32px]
-                    mb-2">
+    <img
+        src="images/lo.png"
+        alt="Logo"
+        class="w-16 h-16 object-contain flex-shrink-0">
 
+    <h2 class="ml-4 font-['Cormorant_Garamond'] text-xl tracking-wide whitespace-nowrap">
+        SOLADIA RESIDENCES
+    </h2>
+
+</div>
+            <!-- Contact -->
+           <div class="text-left">
+
+                <h3 class="font-['Cormorant_Garamond'] text-2xl mb-4">
                     Contact Us
-
                 </h3>
 
-                <div
-                    class="font-['Alegreya']
-                    text-[13px]
-                    leading-6">
-
+                <div class="font-['Alegreya'] text-sm space-y-1 leading-6">
                     <p>+64-000-000</p>
                     <p>+64-300-000</p>
                     <p>housing@email.com</p>
-                    <p>12345 Avenue St. Very Long Address City</p>
-
+                    <p>
+                        123456 Avenue St.<br>
+                        Long Address City
+                    </p>
                 </div>
 
             </div>
 
+            <!-- Navigation -->
+            <div class="text-left">
 
-            <!-- NAVIGATION -->
-            <div class="w-full lg:w-[20%] mt-10 lg:mt-0">
-
-                <h3
-                    class="font-['Cormorant_Garamond']
-                    text-[32px]
-                    mb-2">
-
+                <h3 class="font-['Cormorant_Garamond'] text-2xl mb-4">
                     Navigation
-
                 </h3>
 
-                <div
-                    class="font-['Alegreya']
-                    text-[13px]
-                    leading-6">
-
+                <div class="font-['Alegreya'] text-sm space-y-1 leading-6">
                     <a href="#" class="block hover:underline">Home</a>
                     <a href="#" class="block hover:underline">Facilities</a>
                     <a href="#" class="block hover:underline">Reserve a Facility</a>
-
                 </div>
 
             </div>
 
+            <!-- Policy -->
+            <div class="text-left">
 
-            <!-- POLICIES -->
-            <div
-                class="w-full lg:w-[18%]
-                mt-10 lg:mt-7
-                text-left">
+                <h3 class="font-['Cormorant_Garamond'] text-2xl mb-4">
+                    Policy
+                </h3>
 
-                <div
-                    class="font-['Alegreya']
-                    text-[13px]
-                    leading-6">
-
-                    <a href="#" class="block hover:underline">
-                        Privacy Policy
-                    </a>
-
-                    <a href="#" class="block hover:underline">
-                        Terms and Conditions
-                    </a>
-
+                <div class="font-['Alegreya'] text-sm space-y-1 leading-6">
+                    <a href="#" class="block hover:underline">Privacy Policy</a>
+                    <a href="#" class="block hover:underline">Terms and Conditions</a>
                 </div>
 
             </div>
 
         </div>
 
-        <!-- COPYRIGHT -->
+        <!-- Copyright -->
+        <div class="mt-10 pt-5 border-t border-white/20 text-center">
 
-        <div
-            class="mt-10
-            text-center
-            text-[12px]
-            font-['Alegreya']">
-
-            Copyright 2026 Soladia Residences. All Rights Reserved.
+            <p class="font-['Alegreya'] text-xs tracking-wide">
+                Copyright 2026 Soladia Residences, All Rights Reserved
+            </p>
 
         </div>
 
     </div>
-
 </footer>
 </body>
 
